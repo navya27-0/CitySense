@@ -1,0 +1,83 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.pytest_cache/
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+.env
+.venv
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Database clusters & local data
+data/postgres_cluster/
+data/db/
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads & Dynamic Job Outputs (exclude runtime uploads, keep directory placeholder)
+data/uploads/*
+!data/uploads/.gitkeep
+data/outputs/jobs/*
+!data/outputs/jobs/.gitkeep
+frontend/videos/jobs/*
+!frontend/videos/jobs/.gitkeep
+data/outputs/events/*
+!data/outputs/events/.gitkeep
+data/outputs/incidents/*
+!data/outputs/incidents/.gitkeep
+data/outputs/plates/*
+!data/outputs/plates/.gitkeep
+data/outputs/test_*
+*.mp4.json
+
+# AI Model weights (heavy binaries - downloaded on setup)
+models/*.pt
+models/*.onnx
+models/*.engine
+models/*.bin
+!models/.gitkeep
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & Temporary files
+*.log
+logs/
+scratch_prompt.txt
+full_prompt_sections.txt

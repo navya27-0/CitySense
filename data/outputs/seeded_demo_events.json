@@ -1,0 +1,190 @@
+[
+  {
+    "event_id": "evt_pothole_001",
+    "bus_id": "BUS_101",
+    "route_id": "216",
+    "event_type": "POTHOLE",
+    "event_category": "ROAD_DEFECT",
+    "confidence": 0.94,
+    "severity": "high",
+    "status": "detected",
+    "latitude": 17.4082,
+    "longitude": 78.3884,
+    "image_path": "/evidence/unified_evidence/evidence_BUS_101_pothole_7f6705bc.jpg",
+    "video_timestamp": 12.5,
+    "timestamp": "2026-09-12T05:23:37.543136+00:00",
+    "details": {
+      "defect_area_px": 14200,
+      "surface": "asphalt",
+      "depth_est_cm": 6.5
+    },
+    "is_simulated": true,
+    "disclaimer": "prototype heuristic estimation \u2014 rule-based detection, not forensic determination"
+  },
+  {
+    "event_id": "evt_pothole_002",
+    "bus_id": "BUS_101",
+    "route_id": "216",
+    "event_type": "POTHOLE",
+    "event_category": "ROAD_DEFECT",
+    "confidence": 0.91,
+    "severity": "medium",
+    "status": "verified",
+    "latitude": 17.4412,
+    "longitude": 78.351,
+    "image_path": "/evidence/unified_evidence/evidence_BUS_101_pothole_4ddffc66.jpg",
+    "video_timestamp": 12.5,
+    "timestamp": "2026-09-11T02:23:37.543136+00:00",
+    "details": {
+      "defect_area_px": 8900,
+      "surface": "asphalt",
+      "depth_est_cm": 4.2
+    },
+    "is_simulated": true,
+    "disclaimer": "prototype heuristic estimation \u2014 rule-based detection, not forensic determination"
+  },
+  {
+    "event_id": "evt_waterlog_001",
+    "bus_id": "BUS_102",
+    "route_id": "10",
+    "event_type": "WATERLOGGING",
+    "event_category": "ROAD_DEFECT",
+    "confidence": 0.89,
+    "severity": "high",
+    "status": "under_review",
+    "latitude": 17.4182,
+    "longitude": 78.4802,
+    "image_path": "/evidence/unified_evidence/evidence_BUS_102_waterlogging_50cddb0a.jpg",
+    "video_timestamp": 12.5,
+    "timestamp": "2026-09-12T06:23:37.543136+00:00",
+    "details": {
+      "water_spread_m2": 35.0,
+      "submerged_lane": "left_lane",
+      "corridor": "Tank Bund"
+    },
+    "is_simulated": true,
+    "disclaimer": "prototype heuristic estimation \u2014 rule-based detection, not forensic determination"
+  },
+  {
+    "event_id": "evt_crack_001",
+    "bus_id": "BUS_102",
+    "route_id": "10",
+    "event_type": "DAMAGED_ROAD_SURFACE",
+    "event_category": "ROAD_DEFECT",
+    "confidence": 0.86,
+    "severity": "medium",
+    "status": "resolved",
+    "latitude": 17.3912,
+    "longitude": 78.4752,
+    "image_path": "/evidence/unified_evidence/evidence_BUS_102_damaged_road_surface_27485875.jpg",
+    "video_timestamp": 12.5,
+    "timestamp": "2026-09-07T21:23:37.543136+00:00",
+    "details": {
+      "crack_pattern": "alligator_cracking",
+      "surface_wear": "high"
+    },
+    "is_simulated": true,
+    "disclaimer": "prototype heuristic estimation \u2014 rule-based detection, not forensic determination"
+  },
+  {
+    "event_id": "evt_rash_001",
+    "bus_id": "BUS_103",
+    "route_id": "49M",
+    "event_type": "RASH_DRIVING",
+    "event_category": "TRAFFIC_INCIDENT",
+    "confidence": 0.93,
+    "severity": "high",
+    "status": "NEW",
+    "latitude": 17.4265,
+    "longitude": 78.4525,
+    "image_path": "/evidence/unified_evidence/evidence_BUS_103_rash_driving_6538bf23.jpg",
+    "video_timestamp": 12.5,
+    "timestamp": "2026-09-12T06:53:37.543136+00:00",
+    "details": {
+      "vehicle_tracking_id": 42,
+      "registration_number": "TS09EA1234",
+      "registration_confidence": 0.94,
+      "rule_details": {
+        "lateral_slalom_m": 2.8,
+        "flight_acceleration_m_s2": 4.1,
+        "ttc_seconds": 1.2
+      }
+    },
+    "is_simulated": true,
+    "disclaimer": "prototype heuristic estimation \u2014 rule-based detection, not forensic determination"
+  },
+  {
+    "event_id": "evt_incident_002",
+    "bus_id": "BUS_101",
+    "route_id": "216",
+    "event_type": "SUSPECTED_HIT_AND_RUN",
+    "event_category": "TRAFFIC_INCIDENT",
+    "confidence": 0.9,
+    "severity": "critical",
+    "status": "UNDER_REVIEW",
+    "latitude": 17.4498,
+    "longitude": 78.3812,
+    "image_path": "/evidence/unified_evidence/evidence_BUS_101_suspected_hit_and_run_76b90fc4.jpg",
+    "video_timestamp": 12.5,
+    "timestamp": "2026-09-09T23:23:37.543136+00:00",
+    "details": {
+      "vehicle_tracking_id": 78,
+      "registration_number": "TS07UK8892",
+      "registration_confidence": 0.91,
+      "rule_details": {
+        "impact_proximity_m": 0.8,
+        "flight_speed_delta_kmh": 32.0,
+        "scene_departure_seconds": 2.1
+      }
+    },
+    "is_simulated": true,
+    "disclaimer": "prototype heuristic estimation \u2014 rule-based detection, not forensic determination"
+  },
+  {
+    "event_id": "evt_pothole_003",
+    "bus_id": "BUS_103",
+    "route_id": "49M",
+    "event_type": "POTHOLE",
+    "event_category": "ROAD_DEFECT",
+    "confidence": 0.88,
+    "severity": "low",
+    "status": "resolved",
+    "latitude": 17.3785,
+    "longitude": 78.4985,
+    "image_path": "/evidence/unified_evidence/evidence_BUS_103_pothole_585b4376.jpg",
+    "video_timestamp": 12.5,
+    "timestamp": "2026-08-30T17:23:37.543136+00:00",
+    "details": {
+      "defect_area_px": 4500,
+      "surface": "asphalt"
+    },
+    "is_simulated": true,
+    "disclaimer": "prototype heuristic estimation \u2014 rule-based detection, not forensic determination"
+  },
+  {
+    "event_id": "evt_rash_002",
+    "bus_id": "BUS_102",
+    "route_id": "10",
+    "event_type": "RASH_DRIVING",
+    "event_category": "TRAFFIC_INCIDENT",
+    "confidence": 0.87,
+    "severity": "medium",
+    "status": "RESOLVED",
+    "latitude": 17.362,
+    "longitude": 78.475,
+    "image_path": "/evidence/unified_evidence/evidence_BUS_102_rash_driving_2972c2cd.jpg",
+    "video_timestamp": 12.5,
+    "timestamp": "2026-08-24T15:23:37.543136+00:00",
+    "details": {
+      "vehicle_tracking_id": 19,
+      "registration_number": "AP11BX4040",
+      "registration_confidence": 0.88,
+      "rule_details": {
+        "lateral_slalom_m": 2.1,
+        "ttc_seconds": 1.5
+      }
+    },
+    "is_simulated": true,
+    "disclaimer": "prototype heuristic estimation \u2014 rule-based detection, not forensic determination"
+  }
+]
