@@ -7,16 +7,35 @@ echo   CitySense - Self-Contained Environment Setup
 echo =======================================================
 echo.
 
+set "PY_CMD="
 python --version >nul 2>&1
-if %errorlevel% neq 0 (
-    echo [ERROR] Python is not found in PATH. Please install Python 3.10+ and add it to PATH.
+if %errorlevel% equ 0 (
+    set "PY_CMD=python"
+) else (
+    py --version >nul 2>&1
+    if %errorlevel% equ 0 (
+        set "PY_CMD=py"
+    )
+)
+
+if "%PY_CMD%"=="" (
+    echo [ERROR] Python was not found on your system.
+    echo Please install Python 3.10+ from https://www.python.org/downloads/
+    echo Make sure to check "Add Python to PATH" during installation.
     pause
     exit /b 1
 )
 
-if not exist "venv" (
+echo [*] Using system Python command: %PY_CMD%
+
+if not exist "venv\Scripts\python.exe" (
     echo [*] Creating local virtual environment (venv)...
-    python -m venv venv
+    %PY_CMD% -m venv venv
+    if %errorlevel% neq 0 (
+        echo [ERROR] Failed to create virtual environment.
+        pause
+        exit /b 1
+    )
 ) else (
     echo [*] Virtual environment already exists in .\venv
 )

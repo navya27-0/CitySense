@@ -4,8 +4,13 @@ cd /d "%~dp0"
 
 if not exist "venv\Scripts\python.exe" (
     echo [!] Virtual environment not found in .\venv.
-    echo [*] Running setup.bat first...
+    echo [*] Running setup.bat first to configure environment...
     call setup.bat
+    if not exist "venv\Scripts\python.exe" (
+        echo [ERROR] Setup did not complete successfully.
+        pause
+        exit /b 1
+    )
 )
 
 echo =======================================================
