@@ -9,13 +9,11 @@ echo.
 
 set "PY_CMD="
 python --version >nul 2>&1
-if %errorlevel% equ 0 (
-    set "PY_CMD=python"
-) else (
+if %errorlevel% equ 0 set "PY_CMD=python"
+
+if "%PY_CMD%"=="" (
     py --version >nul 2>&1
-    if %errorlevel% equ 0 (
-        set "PY_CMD=py"
-    )
+    if %errorlevel% equ 0 set "PY_CMD=py"
 )
 
 if "%PY_CMD%"=="" (
@@ -29,15 +27,15 @@ if "%PY_CMD%"=="" (
 echo [*] Using system Python command: %PY_CMD%
 
 if not exist "venv\Scripts\python.exe" (
-    echo [*] Creating local virtual environment (venv)...
+    echo [*] Creating local virtual environment in .\venv...
     %PY_CMD% -m venv venv
-    if %errorlevel% neq 0 (
-        echo [ERROR] Failed to create virtual environment.
+    if not exist "venv\Scripts\python.exe" (
+        echo [ERROR] Failed to create virtual environment in .\venv.
         pause
         exit /b 1
     )
 ) else (
-    echo [*] Virtual environment already exists in .\venv
+    echo [*] Virtual environment already exists in .\venv.
 )
 
 echo [*] Upgrading pip...
@@ -45,6 +43,11 @@ call venv\Scripts\python.exe -m pip install --upgrade pip
 
 echo [*] Installing project dependencies from requirements.txt...
 call venv\Scripts\pip.exe install -r requirements.txt
+if %errorlevel% neq 0 (
+    echo [ERROR] Dependency installation encountered an issue.
+    pause
+    exit /b 1
+)
 
 echo [*] Initializing baseline AI models...
 call venv\Scripts\python.exe -c "from ultralytics import YOLO; YOLO('models/yolov8n.pt')"
